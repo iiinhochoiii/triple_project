@@ -9,6 +9,7 @@ const MetricItem = styled.div`
   font-size: 36px;
   letter-spacing: -1px;
   margin-bottom: 20px;
+  color: ${(props) => props.theme.palette.gray};
 `
 
 const MetricsComponent = () => {

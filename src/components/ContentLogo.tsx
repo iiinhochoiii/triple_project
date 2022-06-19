@@ -14,6 +14,7 @@ const ContentLogoWrap = styled.div`
   background-repeat: no-repeat;
   text-align: center;
   box-sizing: border-box;
+  color: ${(props) => props.theme.palette.gray700};
 `
 
 const ContentLogoComponent = () => {

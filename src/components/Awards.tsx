@@ -21,6 +21,7 @@ const AwardItem = styled.div<AwardItemProps>`
   font-size: 14px;
   line-height: 22px;
   margin-right: 39px;
+  color: ${(props) => props.theme.palette.gray800};
   font-weight: bold;
 `
 
