@@ -1,16 +1,19 @@
 import styled from 'styled-components'
 
-import { CONTENT_LOGO } from '../constants/imageUrl'
+import { IMG_TRIPLE_LOGO } from '../constants/imageUrl'
 
 const ContentLogoWrap = styled.div`
-  background-image: url(${CONTENT_LOGO});
+  position: absolute;
+  top: 150px;
   width: 400px;
   height: 338px;
   background-size: 400px 338px;
-  background-repeat: no-repeat;
   padding-top: 280px;
   font-size: 15px;
+  background-image: url(${IMG_TRIPLE_LOGO});
+  background-repeat: no-repeat;
   text-align: center;
+  box-sizing: border-box;
 `
 
 const ContentLogoComponent = () => {

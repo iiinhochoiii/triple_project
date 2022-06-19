@@ -1,15 +1,16 @@
 import styled from 'styled-components'
 
 import ContentLogoComponent from '../components/ContentLogo'
+import MetricsComponent from '../components/Metrics'
+import AwardsComponent from '../components/Awards'
 
 const SectionContainer = styled.section`
   display: flex;
-  height: 100vh;
 `
 const ResponsiveSection = styled.div`
   min-width: 1200px;
   margin: 0 auto;
-  display: flex;
+  position: relative;
 `
 
 const IndexPage = () => {
@@ -17,6 +18,8 @@ const IndexPage = () => {
     <SectionContainer>
       <ResponsiveSection>
         <ContentLogoComponent />
+        <MetricsComponent />
+        <AwardsComponent />
       </ResponsiveSection>
     </SectionContainer>
   )

@@ -12,6 +12,7 @@ export const GlobalStyle = createGlobalStyle`
     background-color: #fff;
     color: #333333;
     font-family: sans-serif;
+    line-height: 1;
   }
   a {
     color: #000;
