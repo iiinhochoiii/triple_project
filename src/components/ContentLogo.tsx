@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 
+import useFade from '../hooks/useFade'
 import { IMG_TRIPLE_LOGO } from '../constants/imageUrl'
+import { fadeStyles } from '../styles/fadeStyle'
 
 const ContentLogoWrap = styled.div`
   position: absolute;
@@ -15,10 +17,23 @@ const ContentLogoWrap = styled.div`
   text-align: center;
   box-sizing: border-box;
   color: ${(props) => props.theme.palette.gray700};
+
+  // styled-component props에 해당하는 공통 style
+  ${fadeStyles}
 `
 
 const ContentLogoComponent = () => {
-  return <ContentLogoWrap>2021년 12월 기준</ContentLogoWrap>
+  const { opacity, transform, transition } = useFade(0)
+
+  return (
+    <ContentLogoWrap
+      opacity={opacity}
+      transform={transform}
+      transition={transition}
+    >
+      2021년 12월 기준
+    </ContentLogoWrap>
+  )
 }
 
 export default ContentLogoComponent

@@ -1,10 +1,15 @@
 import styled from 'styled-components'
 
 import { IMG_BADGE_GOOGLE, IMG_BADGE_APPLE } from '../constants/imageUrl'
+import useFade from '../hooks/useFade'
+import { fadeStyles } from '../styles/fadeStyle'
 
 const AwardsContainer = styled.div`
   margin: 50px 0px 140px 623px;
   white-space: nowrap;
+
+  // styled-component props에 해당하는 공통 style
+  ${fadeStyles}
 `
 
 interface AwardItemProps {
@@ -26,8 +31,14 @@ const AwardItem = styled.div<AwardItemProps>`
 `
 
 const AwardsComponent = () => {
+  const { opacity, transform, transition } = useFade(200)
+
   return (
-    <AwardsContainer>
+    <AwardsContainer
+      opacity={opacity}
+      transform={transform}
+      transition={transition}
+    >
       <AwardItem imageUrl={IMG_BADGE_GOOGLE}>
         2018 구글 플레이스토어
         <br />

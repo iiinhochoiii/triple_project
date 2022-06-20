@@ -1,8 +1,14 @@
 import styled from 'styled-components'
 
+import useFade from '../hooks/useFade'
+import { fadeStyles } from '../styles/fadeStyle'
+
 const MetricsContainer = styled.div`
   margin-left: 623px;
   padding-top: 150px;
+
+  // styled-component props에 해당하는 공통 style
+  ${fadeStyles}
 `
 
 const MetricItem = styled.div`
@@ -13,8 +19,14 @@ const MetricItem = styled.div`
 `
 
 const MetricsComponent = () => {
+  const { opacity, transform, transition } = useFade(100)
+
   return (
-    <MetricsContainer>
+    <MetricsContainer
+      opacity={opacity}
+      transform={transform}
+      transition={transition}
+    >
       <MetricItem>
         <strong>350만 명</strong>의 사용자
       </MetricItem>
