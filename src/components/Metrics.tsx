@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 import { FadeProps } from '../interfaces/Fade'
+import useCountUpAnimation from '../hooks/useCountUpAnimation'
 
 import { fadeStyles } from './style/fadeStyle'
 
@@ -22,16 +23,20 @@ const MetricItem = styled.div`
 const MetricsComponent = (props: FadeProps) => {
   const { isActive } = props
 
+  const countUser = useCountUpAnimation(350, 2000)
+  const countReview = useCountUpAnimation(21, 2000)
+  const countSave = useCountUpAnimation(650, 2000)
+
   return (
     <MetricsContainer isActive={isActive} transition={100}>
       <MetricItem>
-        <strong>350만 명</strong>의 사용자
+        <strong>{countUser}만 명</strong>의 사용자
       </MetricItem>
       <MetricItem>
-        <strong>21만 개</strong>의 리뷰
+        <strong>{countReview}만 개</strong>의 리뷰
       </MetricItem>
       <MetricItem>
-        <strong>650만 개</strong>의 저장
+        <strong>{countSave}만 개</strong>의 저장
       </MetricItem>
     </MetricsContainer>
   )
