@@ -1,5 +1,7 @@
 export interface FadeProps {
-  opacity: number
-  transform: number
+  isActive: boolean
+}
+
+export interface FadeStyleProps extends FadeProps {
   transition: number
 }

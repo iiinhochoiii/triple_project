@@ -1,11 +1,14 @@
+import { useRef } from 'react'
 import styled from 'styled-components'
 
 import ContentLogoComponent from '../components/ContentLogo'
 import MetricsComponent from '../components/Metrics'
 import AwardsComponent from '../components/Awards'
+import useFadeScroll from '../hooks/useFadeScroll'
 
 const SectionContainer = styled.section`
   display: flex;
+  height: 100vh;
 `
 const ResponsiveSection = styled.div`
   min-width: 1200px;
@@ -14,12 +17,16 @@ const ResponsiveSection = styled.div`
 `
 
 const IndexPage = () => {
+  const heightRef = useRef(null)
+
+  const { isActive } = useFadeScroll(heightRef)
+
   return (
     <SectionContainer>
-      <ResponsiveSection>
-        <ContentLogoComponent />
-        <MetricsComponent />
-        <AwardsComponent />
+      <ResponsiveSection ref={heightRef}>
+        <ContentLogoComponent isActive={isActive} />
+        <MetricsComponent isActive={isActive} />
+        <AwardsComponent isActive={isActive} />
       </ResponsiveSection>
     </SectionContainer>
   )

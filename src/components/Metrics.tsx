@@ -1,7 +1,8 @@
 import styled from 'styled-components'
 
-import useFade from '../hooks/useFade'
-import { fadeStyles } from '../styles/fadeStyle'
+import { FadeProps } from '../interfaces/Fade'
+
+import { fadeStyles } from './style/fadeStyle'
 
 const MetricsContainer = styled.div`
   margin-left: 623px;
@@ -18,15 +19,11 @@ const MetricItem = styled.div`
   color: ${(props) => props.theme.palette.gray};
 `
 
-const MetricsComponent = () => {
-  const { opacity, transform, transition } = useFade(100)
+const MetricsComponent = (props: FadeProps) => {
+  const { isActive } = props
 
   return (
-    <MetricsContainer
-      opacity={opacity}
-      transform={transform}
-      transition={transition}
-    >
+    <MetricsContainer isActive={isActive} transition={100}>
       <MetricItem>
         <strong>350만 명</strong>의 사용자
       </MetricItem>

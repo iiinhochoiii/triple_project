@@ -1,8 +1,9 @@
 import styled from 'styled-components'
 
-import useFade from '../hooks/useFade'
 import { IMG_TRIPLE_LOGO } from '../constants/imageUrl'
-import { fadeStyles } from '../styles/fadeStyle'
+import { FadeProps } from '../interfaces/Fade'
+
+import { fadeStyles } from './style/fadeStyle'
 
 const ContentLogoWrap = styled.div`
   position: absolute;
@@ -22,15 +23,11 @@ const ContentLogoWrap = styled.div`
   ${fadeStyles}
 `
 
-const ContentLogoComponent = () => {
-  const { opacity, transform, transition } = useFade(0)
+const ContentLogoComponent = (props: FadeProps) => {
+  const { isActive } = props
 
   return (
-    <ContentLogoWrap
-      opacity={opacity}
-      transform={transform}
-      transition={transition}
-    >
+    <ContentLogoWrap isActive={isActive} transition={0}>
       2021년 12월 기준
     </ContentLogoWrap>
   )
