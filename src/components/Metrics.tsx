@@ -1,3 +1,4 @@
+import { useRef } from 'react'
 import styled from 'styled-components'
 
 import { FadeProps } from '../interfaces/Fade'
@@ -22,21 +23,29 @@ const MetricItem = styled.div`
 
 const MetricsComponent = (props: FadeProps) => {
   const { isActive } = props
+  const countRef = useRef<null[] | HTMLSpanElement[]>([])
 
-  const countUser = useCountUpAnimation(350, 2000)
-  const countReview = useCountUpAnimation(21, 2000)
-  const countSave = useCountUpAnimation(650, 2000)
+  useCountUpAnimation(countRef)
 
   return (
     <MetricsContainer isActive={isActive} transition={100}>
       <MetricItem>
-        <strong>{countUser}만 명</strong>의 사용자
+        <strong>
+          <span ref={(el) => (countRef.current[0] = el)}>{350}</span>명
+        </strong>
+        의 사용자
       </MetricItem>
       <MetricItem>
-        <strong>{countReview}만 개</strong>의 리뷰
+        <strong>
+          <span ref={(el) => (countRef.current[1] = el)}>{21}</span>만 개
+        </strong>
+        의 리뷰
       </MetricItem>
       <MetricItem>
-        <strong>{countSave}만 개</strong>의 저장
+        <strong>
+          <span ref={(el) => (countRef.current[2] = el)}>{650}</span>만 개
+        </strong>
+        의 저장
       </MetricItem>
     </MetricsContainer>
   )
