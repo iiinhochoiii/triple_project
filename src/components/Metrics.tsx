@@ -25,28 +25,29 @@ const MetricsComponent = (props: FadeProps) => {
   const { isActive } = props
   const countRef = useRef<null[] | HTMLSpanElement[]>([])
 
+  const metrics = [
+    { id: 0, count: 350, unit: '만 명', text: '의 사용자' },
+    { id: 1, count: 21, unit: '만 개', text: '의 리뷰' },
+    { id: 2, count: 650, unit: '만 개', text: '의 저장' },
+  ]
+
+  // Hook은 반드시 반환할 필요가 없다고 문서에 명시되어있음
+  // https://reactjs.org/docs/hooks-effect.html
   useCountUpAnimation(countRef)
 
   return (
     <MetricsContainer isActive={isActive} transition={100}>
-      <MetricItem>
-        <strong>
-          <span ref={(el) => (countRef.current[0] = el)}>{350}</span>명
-        </strong>
-        의 사용자
-      </MetricItem>
-      <MetricItem>
-        <strong>
-          <span ref={(el) => (countRef.current[1] = el)}>{21}</span>만 개
-        </strong>
-        의 리뷰
-      </MetricItem>
-      <MetricItem>
-        <strong>
-          <span ref={(el) => (countRef.current[2] = el)}>{650}</span>만 개
-        </strong>
-        의 저장
-      </MetricItem>
+      {metrics.map((metric) => (
+        <MetricItem key={metric.id}>
+          <strong>
+            <span ref={(el) => (countRef.current[metric.id] = el)}>
+              {metric.count}
+            </span>
+            {metric.unit}
+          </strong>
+          {metric.text}
+        </MetricItem>
+      ))}
     </MetricsContainer>
   )
 }
