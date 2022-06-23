@@ -11,9 +11,9 @@ const SectionContainer = styled.section`
   display: flex;
 `
 const ResponsiveSection = styled.div`
+  position: relative;
   min-width: 1200px;
   margin: 0 auto;
-  position: relative;
 `
 
 const IndexPage = () => {

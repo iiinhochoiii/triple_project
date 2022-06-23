@@ -19,16 +19,16 @@ interface AwardItemProps {
 
 const AwardItem = styled.div<AwardItemProps>`
   display: inline-block;
+  height: 54px;
+  margin-right: 39px;
+  padding: 5px 0px 5px 62px;
   background-image: url(${(props) => props.imageUrl});
   background-size: 54px 54px;
-  height: 54px;
   background-repeat: no-repeat;
-  padding: 5px 0px 5px 62px;
   font-size: 14px;
-  line-height: 22px;
-  margin-right: 39px;
-  color: ${(props) => props.theme.palette.gray800};
   font-weight: bold;
+  color: ${(props) => props.theme.palette.gray800};
+  line-height: 22px;
 `
 
 const AwardsComponent = (props: FadeProps) => {

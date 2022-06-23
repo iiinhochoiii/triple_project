@@ -15,10 +15,10 @@ const MetricsContainer = styled.div`
 `
 
 const MetricItem = styled.div`
-  font-size: 36px;
-  letter-spacing: -1px;
   margin-bottom: 20px;
+  font-size: 36px;
   color: ${(props) => props.theme.palette.gray};
+  letter-spacing: -1px;
 `
 
 const MetricsComponent = (props: FadeProps) => {

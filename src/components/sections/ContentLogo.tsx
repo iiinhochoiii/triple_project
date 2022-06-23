@@ -10,15 +10,15 @@ const ContentLogoWrap = styled.div`
   top: 150px;
   width: 400px;
   height: 338px;
-  background-size: 400px 338px;
   padding-top: 280px;
+  background-image: url(${IMG_TRIPLE_LOGO});
+  background-size: 400px 338px;
+  background-repeat: no-repeat;
   font-size: 15px;
   font-weight: 500;
-  background-image: url(${IMG_TRIPLE_LOGO});
-  background-repeat: no-repeat;
+  color: ${(props) => props.theme.palette.gray700};
   text-align: center;
   box-sizing: border-box;
-  color: ${(props) => props.theme.palette.gray700};
 
   // styled-component props에 해당하는 공통 style
   ${fadeStyles}
