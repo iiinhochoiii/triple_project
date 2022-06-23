@@ -33,7 +33,7 @@ const MetricsComponent = (props: FadeProps) => {
 
   // Hook은 반드시 반환할 필요가 없다고 문서에 명시되어있음
   // https://reactjs.org/docs/hooks-effect.html
-  useCountUpAnimation(countRef)
+  useCountUpAnimation(countRef, 2000, isActive)
 
   return (
     <MetricsContainer isActive={isActive} transition={100}>

@@ -8,7 +8,6 @@ import useFadeScroll from '../hooks/useFadeScroll'
 
 const SectionContainer = styled.section`
   display: flex;
-  height: 100vh;
 `
 const ResponsiveSection = styled.div`
   min-width: 1200px;
@@ -17,13 +16,12 @@ const ResponsiveSection = styled.div`
 `
 
 const IndexPage = () => {
-  const heightRef = useRef(null)
-
-  const { isActive } = useFadeScroll(heightRef)
+  const scrolltRef = useRef(null)
+  const { isActive } = useFadeScroll(scrolltRef)
 
   return (
     <SectionContainer>
-      <ResponsiveSection ref={heightRef}>
+      <ResponsiveSection ref={scrolltRef}>
         <ContentLogoComponent isActive={isActive} />
         <MetricsComponent isActive={isActive} />
         <AwardsComponent isActive={isActive} />

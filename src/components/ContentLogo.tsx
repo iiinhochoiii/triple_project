@@ -13,6 +13,7 @@ const ContentLogoWrap = styled.div`
   background-size: 400px 338px;
   padding-top: 280px;
   font-size: 15px;
+  font-weight: 500;
   background-image: url(${IMG_TRIPLE_LOGO});
   background-repeat: no-repeat;
   text-align: center;

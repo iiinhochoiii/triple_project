@@ -3,6 +3,7 @@ import { useCallback, useEffect } from 'react'
 const useCountUp = (
   ref: React.MutableRefObject<null[] | HTMLSpanElement[]>,
   duration = 2000,
+  isActive: boolean,
 ) => {
   const easeOutQuad = (t: number) => t * (2 - t)
 
@@ -35,8 +36,10 @@ const useCountUp = (
   )
 
   useEffect(() => {
-    ref.current.forEach(animateCountUp)
-  }, [animateCountUp, duration, ref])
+    if (isActive) {
+      ref.current.forEach(animateCountUp)
+    }
+  }, [animateCountUp, duration, ref, isActive])
 }
 
 export default useCountUp
