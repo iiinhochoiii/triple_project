@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
-import { IMG_TRIPLE_LOGO } from '../constants/imageUrl'
-import { FadeProps } from '../interfaces/Fade'
+import { IMG_TRIPLE_LOGO } from '../../constants/imageUrl'
+import { FadeProps } from '../../interfaces/Fade'
 
 import { fadeStyles } from './style/fadeStyle'
 

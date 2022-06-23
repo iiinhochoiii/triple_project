@@ -1,9 +1,10 @@
 import { useRef } from 'react'
 import styled from 'styled-components'
 
-import ContentLogoComponent from '../components/ContentLogo'
-import MetricsComponent from '../components/Metrics'
-import AwardsComponent from '../components/Awards'
+import MainLayout from '../components/layouts/MainLayout'
+import ContentLogoComponent from '../components/sections/ContentLogo'
+import MetricsComponent from '../components/sections/Metrics'
+import AwardsComponent from '../components/sections/Awards'
 import useFadeScroll from '../hooks/useFadeScroll'
 
 const SectionContainer = styled.section`
@@ -20,13 +21,15 @@ const IndexPage = () => {
   const { isActive } = useFadeScroll(scrolltRef)
 
   return (
-    <SectionContainer>
-      <ResponsiveSection ref={scrolltRef}>
-        <ContentLogoComponent isActive={isActive} />
-        <MetricsComponent isActive={isActive} />
-        <AwardsComponent isActive={isActive} />
-      </ResponsiveSection>
-    </SectionContainer>
+    <MainLayout>
+      <SectionContainer>
+        <ResponsiveSection ref={scrolltRef}>
+          <ContentLogoComponent isActive={isActive} />
+          <MetricsComponent isActive={isActive} />
+          <AwardsComponent isActive={isActive} />
+        </ResponsiveSection>
+      </SectionContainer>
+    </MainLayout>
   )
 }
 

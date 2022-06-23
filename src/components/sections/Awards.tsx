@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
-import { IMG_BADGE_GOOGLE, IMG_BADGE_APPLE } from '../constants/imageUrl'
-import { FadeProps } from '../interfaces/Fade'
+import { IMG_BADGE_GOOGLE, IMG_BADGE_APPLE } from '../../constants/imageUrl'
+import { FadeProps } from '../../interfaces/Fade'
 
 import { fadeStyles } from './style/fadeStyle'
 

@@ -1,8 +1,8 @@
 import { useRef } from 'react'
 import styled from 'styled-components'
 
-import { FadeProps } from '../interfaces/Fade'
-import useCountUpAnimation from '../hooks/useCountUpAnimation'
+import { FadeProps } from '../../interfaces/Fade'
+import useCountUpAnimation from '../../hooks/useCountUpAnimation'
 
 import { fadeStyles } from './style/fadeStyle'
 
