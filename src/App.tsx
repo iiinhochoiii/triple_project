@@ -4,6 +4,7 @@ import { ThemeProvider } from 'styled-components'
 import { GlobalStyle } from './styles/global-styles'
 import { theme } from './styles/theme'
 import IndexPage from './pages/index'
+import NotFoundPage from './pages/notFound'
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<IndexPage />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </BrowserRouter>
     </ThemeProvider>
