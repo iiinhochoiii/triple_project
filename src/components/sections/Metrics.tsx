@@ -26,9 +26,9 @@ const MetricsComponent = (props: FadeProps) => {
   const countRef = useRef<null[] | HTMLSpanElement[]>([])
 
   const metrics = [
-    { id: 0, count: 350, unit: '만 명', text: '의 사용자' },
-    { id: 1, count: 21, unit: '만 개', text: '의 리뷰' },
-    { id: 2, count: 650, unit: '만 개', text: '의 저장' },
+    { id: 0, count: 700, unit: '만 명', text: '의 여행자' },
+    { id: 1, count: 100, unit: '만 개', text: '의 여행 리뷰' },
+    { id: 2, count: 470, unit: '만 개', text: '의 여행 일정' },
   ]
 
   // Hook은 반드시 반환할 필요가 없다고 문서에 명시되어있음
