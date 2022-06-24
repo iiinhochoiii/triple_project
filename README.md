@@ -34,7 +34,7 @@ $ npm start
 
 ### 결과물
 
-![images](./readme-images/result.gif)
+![images](./public/readme/images/result.gif)
 
 #### 기능 소개
 
