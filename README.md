@@ -2,13 +2,25 @@
 
 ### 프로젝트 실행 방법
 
-1. node_modules 설치를 위해 다음과 같이 터미널에 입력해주세요.
+1. 터미널에서 원하시는 경로로 이동하여, 다음과 같이 입력하여 프로젝트를 clone 받습니다.
+
+```
+$ git clone https://github.com/iiinhochoiii/triple_project.git
+```
+
+2. clone을 받으면 "triple_project" 폴더가 생성 되며, 해당 프로젝트로 이동합니다.
+
+```
+ $ cd triple_project
+```
+
+3. /triple_project 경로로 이동이 되었다면, node_modules 설치를 위해 다음과 같이 터미널에 입력해주세요.
 
 ```
 $ npm install
 ```
 
-2. node_modules이 설치 되었다면, 다음과 같이 입력하여 프로젝트를 실행 시켜 주세요.
+4. node_modules이 설치 되었다면, 다음과 같이 입력하여 프로젝트를 실행 시켜 주세요.
 
 ```
 $ npm start 
